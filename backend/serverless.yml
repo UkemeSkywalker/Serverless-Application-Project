@@ -14,9 +14,11 @@ provider:
   runtime: nodejs12.x
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
+
   tracing:
     lambda: true
     apiGateway: true
+    
   environment:
     PROJECT_NAME: gandalf-todo
     TODOS_TABLE: gandalf-todo-${self:provider.stage}
